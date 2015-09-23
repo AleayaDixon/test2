@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="https://code.ionicframework.com/1.0.0/css/ionic.min.css" rel="stylesheet">
+    <script src="https://code.ionicframework.com/1.0.0/js/ionic.bundle.js"></script>
+      <!-- this is where I include my js files -->
+      <script src="app.js"></script>
+  </head>
+  <body ng-app="app" ng-controller='AppCtrl' >
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">Awesome App</h1>
+      </ion-header-bar>
+      <ion-content class="padding">
+<!--new below-->
+          <div>Username
+            <input type="text" id="" />
+        </div>
+        <div>Password
+            <input type="text" id="" />
+        </div>
+       <button class="button button-energized" ng-click = "login()"> Login </button>
+<!-- new above-->
+        <ion-list>
+        <ion-item ng-repeat="stuff in getStuff">
+            {{stuff.name}}
+        </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>
