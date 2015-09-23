@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        REST API TESTING IN JAVASCRIPT
+    </title>
+    <!-- INFORMATION ON $.ajax is available with the link below -->
+    <!-- http://www.w3schools.com/jquery/jquery_get_started.asp -->
+    <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+    <!-- for styling see: bootstrap.com -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="app.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="AppCtrl" onload="login()">
+    <div class="jumbotron">
+        <h2>Working with REST API Verbs and Parse.com in Javasctipt</h2>
+    </div>
+    <p>
+        <button class="btn btn-large" onclick="postStuff()">Create Stuff</button>
+        <div>Name
+            <input type="text" id="stuff_name_create" />
+        </div>
+        <div>Room
+            <input type="text" id="stuff_room_create" />
+        </div>
+    </p>
+    <hr/>
+    <p>
+        <button class="btn btn-large" onclick="putStuff()">Update Stuff</button>
+        <div>Object Id
+            <input type="text" id="stuff_id_update" />
+        </div>
+        <div>Name
+            <input type="text" id="stuff_name_update" />
+        </div>
+        <div>Room
+            <input type="text" id="stuff_room_update" />
+        </div>
+    </p>
+    <hr/>
+    <p>
+        <button class="btn" onclick="getStuffList()">Get List of Stuff</button>
+    </p>
+    <hr/>
+    <p>
+        <button class="btn" onclick="getStuff()">
+            Get Stuff by ID
+        </button>
+    </p>
+    <hr/>
+    <p>
+        <button class="btn" onclick="deleteStuff()">
+            Delete Stuff by ID
+        </button>
+    </p>
+    <hr/>
+    <h3>Server Responses Displayed Below:</h3>
+    <pre id="responseText"></pre>
+</body>
+
+<script type="text/javascript">    
